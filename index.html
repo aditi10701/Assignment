@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Products Carousel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <style>
+        /* Add your custom styles here */
+        #featured-products {
+            margin-top: 20px;
+        }
+        .owl-carousel {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .owl-item img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center">Featured Products</h2>
+    <div id="featured-products" class="owl-carousel owl-theme">
+        <!-- Add your featured product items here -->
+        <div class="item"><img src="product1.jpg" alt="Product 1"></div>
+        <div class="item"><img src="product2.jpg" alt="Product 2"></div>
+        <div class="item"><img src="product3.jpg" alt="Product 3"></div>
+        <!-- Add more items as needed -->
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $("#featured-products").owlCarousel({
+            items: 3, // Number of items to display
+            loop: true, // Enable loop
+            autoplay: true, // Enable autoplay
+            autoplayTimeout: 3000, // Autoplay interval in milliseconds
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
